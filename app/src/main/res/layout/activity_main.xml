@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ListView
+        android:id="@+id/list1"
+        android:layout_width="wrap_content"
+        android:layout_height="262dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/numb_add1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,6 +35,7 @@
             android:layout_marginBottom="60dp"
             android:layout_weight="1"
             android:ems="10"
+            android:singleLine="true"
             android:inputType="number" />
 
         <EditText
@@ -33,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
+            android:singleLine="true"
             android:text="Text" />
 
         <Button
@@ -43,15 +55,5 @@
             android:layout_weight="1"
             android:text="Add" />
     </LinearLayout>
-
-    <ListView
-        android:id="@+id/list1"
-        android:layout_width="wrap_content"
-        android:layout_height="262dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
