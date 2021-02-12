@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements Removable
             @Override
             public void onItemClick (AdapterView<?> adapterView, View view, int position, long l)
             {
+                Toast.makeText(getApplicationContext(), product_array_list.get(position), Toast.LENGTH_LONG).show();
+
                 CustomDialogFragment fragment = new CustomDialogFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("test_key", String.valueOf(adapter.getItem(position)));
@@ -67,25 +69,10 @@ public class MainActivity extends AppCompatActivity implements Removable
     @Override
     public void remove(String product)
     {
-        product_array_list.remove(LISTVIEW1.toString());
+        product_array_list.remove(getTotalString());
+        LISTVIEW1.setAdapter(adapter);
     }
 }
 
-        //LISTVIEW1.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        //{
-          //  @Override
-            //public void onItemClick(AdapterView<?> arg0, View v, int arg2, long arg3)
-            //{
-              //  TextView tv = (TextView) v.findViewById(R.id.string_add1);
-                //Toast.makeText(getApplicationContext(), tv.getText().toString(), Toast.LENGTH_SHORT).show();
-//            }
-  //      });
 
-//        LISTVIEW1.setOnItemClickListener(new AdapterView.OnItemClickListener()
-//        {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-//            {
-//                Toast.makeText(getApplicationContext(), product_array_list.get(position), Toast.LENGTH_LONG).show();
-//            }
-//        });
+
